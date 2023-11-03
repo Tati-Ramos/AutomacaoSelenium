@@ -31,6 +31,8 @@ assert products_title.text == "Products"
 img_backpack = browser.find_element(By.XPATH, "(//img[@class='inventory_item_img'])[1]")
 print(img_backpack.get_attribute("alt"))
 assert img_backpack.get_attribute("alt") == "Sauce Labs Backpack"
+#assert img_backpack.is_displayed() - se está aparecendo
+assert not img_backpack.is_displayed() # se não estiver aparecendo
 
 time.sleep(1)
 browser.quit()
